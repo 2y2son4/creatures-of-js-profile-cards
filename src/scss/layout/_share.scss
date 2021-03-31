@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //padding: rem(30) 0 rem(70);
   &__button {
     background-color: $icons;
     width: rem(199);
@@ -25,6 +24,9 @@
     &--text {
       font-size: rem(18);
       padding: rem(14) 0;
+      &:hover {
+        color: $main-text;
+      }
     }
     &--dis {
       background-color: $bt-click;

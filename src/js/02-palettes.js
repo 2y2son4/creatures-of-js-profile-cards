@@ -5,7 +5,7 @@ const cardElement = document.querySelector('.js-card');
 let checkedPalette = 0;
 
 function handlerPalette() {
-  cardElement.classList.remove('palette-0', 'palette-1', 'palette-2');
+  cardElement.classList.remove('palette-0', 'palette-1', 'palette-2', 'palette-3');
   const checkedPaletteElement = document.querySelector('.js-palette:checked');
   checkedPalette = checkedPaletteElement.value;
   cardElement.classList.add('palette-' + checkedPalette);

@@ -16,7 +16,8 @@
   }
   .palette-0,
   .palette-1,
-  .palette-2 {
+  .palette-2,
+  .palette-3 {
     display: flex;
     margin-left: rem(10);
   }
@@ -61,5 +62,17 @@
   }
   .color-3 {
     background-color: $palette-2-3;
+  }
+}
+
+.palette-3 {
+  .color-1 {
+    background-color: $palette-3-1;
+  }
+  .color-2 {
+    background-color: $palette-3-2;
+  }
+  .color-3 {
+    background-color: $palette-3-3;
   }
 }
