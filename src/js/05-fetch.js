@@ -36,14 +36,16 @@ function fetchAPI() {
     .then((data) => {
       const linkElement = document.querySelector('.js-card-link');
       if (data.success === true) {
-        data.cardURL;
         shareLink = data.cardURL;
-        linkElement.innerHTML = `<a href="${shareLink}" class="shareclick__text js-shareclick" target="_blank">Pincha aqui para ver tu tarjeta AWESOME.</a>`;
+        linkElement.innerHTML = `<a href="${shareLink}" class="shareclick__text js-shareclick" target="_blank" title="Haz click para ver tu tarjeta">Pincha aqui para ver tu tarjeta AWESOME.</a>`;
         twitterHiddenElement.classList.remove('hidden-share');
+        hiddenElement.classList.add('hidden-share');
       } else {
         shareButton.disabled = false;
         twitterHiddenElement.classList.add('hidden-share');
         hiddenElement.classList.remove('hidden-share');
+        shareButton.classList.remove('share__button--dis');
+        shareButton.classList.add('share__button');
       }
     });
 }
