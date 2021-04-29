@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 'use strict';
 
 function getUserData() {
   return {
-    // eslint-disable-next-line no-undef
     photo: photo,
     palette: parseInt(document.querySelector('.js-palette:checked').value),
     name: document.querySelector('.js-name').value,
@@ -14,14 +15,12 @@ function getUserData() {
   };
 }
 
-// eslint-disable-next-line no-unused-vars
 function saveInLocalStorage() {
   const userData = getUserData();
   const userDataInString = JSON.stringify(userData);
   localStorage.setItem('userData', userDataInString);
 }
 
-// eslint-disable-next-line no-unused-vars
 function getFromLocalStorage() {
   const userDataInString = localStorage.getItem('userData');
   if (userDataInString !== null) {
@@ -32,7 +31,7 @@ function getFromLocalStorage() {
     document.querySelector('.js-phone').value = userData.phone;
     document.querySelector('.js-linkedin').value = userData.linkedin;
     document.querySelector('.js-github').value = userData.github;
-    // eslint-disable-next-line no-undef
+
     photo = userData.photo;
     const paletteElements = document.querySelectorAll('.js-palette');
     for (const paletteElement of paletteElements) {
@@ -41,11 +40,8 @@ function getFromLocalStorage() {
       }
     }
 
-    // eslint-disable-next-line no-undef
     updateAllInputs();
-    // eslint-disable-next-line no-undef
     handlerPalette();
-    // eslint-disable-next-line no-undef
     updatePhoto();
   }
 }
